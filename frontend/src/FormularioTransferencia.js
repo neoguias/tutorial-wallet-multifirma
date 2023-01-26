@@ -18,10 +18,10 @@ export default function FormularioTransferencia({crearTransferencia})
           <label htmlFor="cantidad">Cantidad</label>
           <input
             id="cantidad"
-            step="any"
+            min="0"
             className="form-control"
             type="number"
-            onChange={event => setCantidad(event.target.value)}
+            onChange={event => setCantidad(event.target.value.trim())}
           />
         </div>
         <div className="form-group mt-2">
@@ -30,7 +30,7 @@ export default function FormularioTransferencia({crearTransferencia})
             id="destinatario"
             className="form-control"
             type="text"
-            onChange={event => setDestinatario(event.target.value)}
+            onChange={event => setDestinatario(event.target.value.trim())}
           />
         </div>
         <button className="btn btn-primary mt-2">Enviar</button>
