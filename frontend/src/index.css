@@ -1,13 +1,1 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+:root{font-family:system-ui,sans-serif;color:#172033;background:#f3f5fa;font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,input{font:inherit}button{border:0;border-radius:8px;padding:11px 16px;background:#4143bc;color:white;font-weight:650;cursor:pointer}button:disabled{opacity:.45;cursor:default}.container{max-width:1180px;margin:auto;padding:40px 22px}header{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-bottom:28px}h1{margin:8px 0;font-size:36px}h2{font-size:20px;margin:0 0 18px}p{line-height:1.6}.eyebrow{font-size:12px;letter-spacing:.1em;color:#575c8d;font-weight:700}.summary{display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px;margin:24px 0}.summary>div,.panel{background:#fff;border:1px solid #e0e4ed;border-radius:12px;padding:24px}.summary span{display:block;font-size:13px;color:#646e84}.summary strong{display:block;font-size:27px;margin-top:9px}.panel{margin-bottom:20px}.columns{display:grid;grid-template-columns:1.3fr 1fr;gap:20px}.address{font:13px ui-monospace,monospace;overflow-wrap:anywhere}li{margin:8px 0}label{display:block;margin-bottom:16px;font-size:14px;font-weight:600}input{display:block;width:100%;padding:11px;border:1px solid #c7ccda;border-radius:7px;margin-top:7px}.alert{background:#fff0ef;color:#9d2525;border:1px solid #f4c5c2;padding:16px;border-radius:9px}.alert button{margin-left:15px}.notice{color:#166534;background:#eaf6ed;padding:14px;border-radius:9px}.section-heading{display:flex;justify-content:space-between;align-items:center}.secondary{background:#eceef9;color:#34369b}.table-wrap{overflow:auto}table{border-collapse:collapse;min-width:640px;width:100%;font-size:14px}th,td{text-align:left;padding:14px 10px;border-bottom:1px solid #e8eaf0}td.address{max-width:220px}@media(max-width:700px){header{align-items:flex-start;flex-direction:column}h1{font-size:29px}.summary,.columns{grid-template-columns:1fr}.container{padding:22px 14px}.panel{padding:18px}}

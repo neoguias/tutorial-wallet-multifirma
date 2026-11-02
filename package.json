@@ -1,18 +1,36 @@
 {
-  "name": "wallet-multifirma",
-  "version": "1.0.0",
-  "description": "",
-  "main": "truffle-config.js",
-  "directories": {
-    "test": "test"
+  "name": "solidity-multisig-wallet",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "workspaces": [
+    "frontend"
+  ],
+  "engines": {
+    "node": ">=24.12.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "hardhat build && node scripts/export-abi.mjs",
+    "test": "hardhat test",
+    "node": "hardhat node",
+    "deploy": "hardhat run scripts/deploy.ts --network localhost",
+    "deploy:sepolia": "hardhat run scripts/deploy.ts --network sepolia",
+    "dev": "npm run dev --workspace frontend",
+    "build": "npm run compile && npm run build --workspace frontend"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@openzeppelin/test-helpers": "^0.5.16",
-    "@truffle/hdwallet-provider": "^2.1.5"
+  "devDependencies": {
+    "hardhat": "^3.0.0",
+    "@nomicfoundation/hardhat-ethers": "^4.0.0",
+    "@nomicfoundation/hardhat-mocha": "^3.0.0",
+    "@nomicfoundation/hardhat-ethers-chai-matchers": "^3.0.0",
+    "@types/mocha": "^10.0.0",
+    "@types/chai": "^5.0.0",
+    "@types/node": "^24.0.0",
+    "chai": "^5.0.0",
+    "mocha": "^11.0.0",
+    "typescript": "~6.0.0",
+    "ethers": "^6.0.0",
+    "dotenv": "^17.0.0"
   }
 }

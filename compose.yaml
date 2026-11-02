@@ -1,0 +1,20 @@
+name: neoguias-multisig
+
+x-node: &node
+  image: node:24-bookworm-slim
+  user: '${LOCAL_UID:-1000}:${LOCAL_GID:-1000}'
+  working_dir: /app
+  volumes:
+    - .:/app
+
+services:
+  chain:
+    <<: *node
+    command: npm run node -- --hostname 0.0.0.0
+    ports:
+      - '127.0.0.1:8545:8545'
+  frontend:
+    <<: *node
+    command: npm run dev
+    ports:
+      - '127.0.0.1:5178:5173'
